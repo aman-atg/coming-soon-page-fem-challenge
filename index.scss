@@ -11,6 +11,7 @@ $Soft-Red: hsl(0, 93%, 68%);
 body {
   background-image: url("/images/bg-pattern-desktop.svg");
   background-size: cover;
+  background-position: center center;
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
 }
@@ -20,6 +21,9 @@ body {
   min-height: 100vh;
 }
 .left {
+  .bg-mobile {
+    display: none;
+  }
   padding: 0 40px;
   width: 60%;
   h1 {
@@ -120,11 +124,17 @@ body {
   background-position: center center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .left {
+    .bg-mobile {
+      display: block;
+      width: calc(100% + 80px);
+      margin: 0 -40px 0 -40px;
+    }
     width: 100%;
+    margin-bottom: 60px;
   }
-  .right{
-      display: none;
+  .right {
+    display: none;
   }
 }
