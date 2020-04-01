@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:200,400,600&display=swap");
+
+$Primary-Color: hsl(0, 36%, 70%);
+$Secondary-Color: hsl(0, 6%, 24%);
+$Soft-Red: hsl(0, 93%, 68%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.left {
+  padding: 0 40px;
+  width: 60%;
+  h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1.1;
+    color: $Secondary-Color;
+    span {
+      color: $Primary-Color;
+      font-weight: 200;
+    }
+  }
+  p {
+    color: $Primary-Color;
+    line-height: 26px;
+    margin: 30px 0;
+  }
+
+  form {
+    position: relative;
+    input {
+      background-color: transparent;
+      border: none;
+      border: 1px solid $Primary-Color;
+      border-radius: 50px;
+      padding: 15px 30px;
+      width: 100%;
+      height: 53.5px;
+      font-size: 16px;
+      &:focus {
+        border-width: 2px;
+        outline: none;
+        box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+      }
+      &::placeholder {
+        color: $Primary-Color;
+      }
+    }
+    button {
+      background-image: linear-gradient(
+        135deg,
+        hsl(0, 80%, 86%),
+        hsl(0, 74%, 74%)
+      );
+      box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+      border: none;
+      border-radius: 50px;
+      padding: 15px;
+      width: 100px;
+      position: absolute;
+      transition: opacity ease 0.2s;
+      top: 0;
+      right: 0;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    small {
+      color: $Soft-Red;
+      display: none;
+      margin: 20px 0 0 30px;
+    }
+    .error {
+      position: absolute;
+      display: none;
+      top: 15px;
+      right: 120px;
+    }
+  }
+  //when there is error class in form then only other properties will work
+  form.error {
+    .error,
+    small {
+      display: block;
+    }
+    input {
+      border: 2px solid $Soft-Red; //check color
+    }
+  }
+
+  .logo {
+    margin: 60px 0;
+    width: 200px;
+  }
+  .content {
+    max-width: 400px;
+  }
+}
+
+.right {
+  width: 40%;
+}
+
+.bg-img {
+  background-image: url("./images/hero-desktop.jpg");
+  background-size: cover;
+  background-position: center center;
+}
