@@ -86,4 +86,11 @@ body {
   background-size: cover;
   background-position: center center; }
 
+@media (max-width: 400px) {
+  .left {
+    width: 100%; }
+
+  .right {
+    display: none; } }
+
 /*# sourceMappingURL=index.css.map */
