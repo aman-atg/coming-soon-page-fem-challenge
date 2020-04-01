@@ -126,6 +126,7 @@ body {
 
 @media (max-width: 600px) {
   .left {
+    // text-align: center;
     .bg-mobile {
       display: block;
       width: calc(100% + 80px);
@@ -133,6 +134,9 @@ body {
     }
     width: 100%;
     margin-bottom: 60px;
+    h1 {
+      font-size: 40px;
+    }
   }
   .right {
     display: none;
